@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Travel Itinerary Generator</title>
+    <link rel="stylesheet" href="style.css"> <!-- Add your CSS file here -->
+</head>
+<body>
+    <div class="container">
+        <h1>Personalized Travel Itinerary Generator</h1>
+        <form id="itineraryForm">
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" placeholder="e.g., Tokyo" required>
+            <div id="destinationSuggestions" class="suggestions"></div>
+
+            <label for="budget">Budget:</label>
+            <input type="text" id="budget" placeholder="e.g., 1000" required>
+
+            <label for="interests">Interests (comma-separated):</label>
+            <input type="text" id="interests" placeholder="e.g., hiking, temple" required>
+            <div id="interestSuggestions" class="suggestions"></div>
+
+            <label for="days">Trip Duration (days):</label>
+            <input type="number" id="days" placeholder="e.g., 3" min="1" required>
+
+            <button type="submit">Generate Itinerary</button>
+        </form>
+
+        <div id="itineraryOutput">
+            <h2>Your Itinerary:</h2>
+            <ul id="itineraryList"></ul>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('destination').addEventListener('input', function() {
+            const query = this.value;
+            if (query.length > 1) {
+                fetch(`/suggest?query=${query}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const destinationSuggestions = document.getElementById('destinationSuggestions');
+                        destinationSuggestions.innerHTML = '';
+                        data.destinations.forEach(destination => {
+                            const div = document.createElement('div');
+                            div.textContent = destination;
+                            div.onclick = () => {
+                                document.getElementById('destination').value = destination;
+                                destinationSuggestions.innerHTML = '';
+                            };
+                            destinationSuggestions.appendChild(div);
+                        });
+                    });
+            }
+        });
+
+        document.getElementById('interests').addEventListener('input', function() {
+            const query = this.value;
+            if (query.length > 1) {
+                fetch(`/suggest?query=${query}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const interestSuggestions = document.getElementById('interestSuggestions');
+                        interestSuggestions.innerHTML = '';
+                        data.interests.forEach(interest => {
+                            const div = document.createElement('div');
+                            div.textContent = interest;
+                            div.onclick = () => {
+                                const currentInterests = document.getElementById('interests').value.split(',').map(i => i.trim());
+                                if (!currentInterests.includes(interest)) {
+                                    currentInterests.push(interest);
+                                    document.getElementById('interests').value = currentInterests.join(', ');
+                                }
+                                interestSuggestions.innerHTML = '';
+                            };
+                            interestSuggestions.appendChild(div);
+                        });
+                    });
+            }
+        });
+
+        document.getElementById('itineraryForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const destination = document.getElementById('destination').value;
+            const budget = document.getElementById('budget').value;
+            const interests = document.getElementById('interests').value;
+            const days = document.getElementById('days').value;
+
+            fetch('/generate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    destination: destination,
+                    budget: budget,
+                    interests: interests,
+                    days: days
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const itineraryList = document.getElementById('itineraryList');
+                itineraryList.innerHTML = ''; // Clear previous results
+
+                if (data.itinerary.length === 0) {
+                    itineraryList.innerHTML = '<li>No matching places found. Please adjust your preferences.</li>';
+                } else {
+                    data.itinerary.forEach(item => {
+                        const li = document.createElement('li');
+                        li.textContent = item;
+                        itineraryList.appendChild(li);
+                    });
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,178 @@
+[
+    {
+        "name": "Tokyo Tower",
+        "description": "A communications and observation tower located in the Shiba-koen district.",
+        "location": "Tokyo",
+        "tags": ["sightseeing", "landmark"],
+        "cost": 25.00
+    },
+    {
+        "name": "Shibuya Crossing",
+        "description": "Famous intersection and a bustling area known for its shopping.",
+        "location": "Tokyo",
+        "tags": ["shopping", "culture"],
+        "cost": 0.00
+    },
+    {
+        "name": "Meiji Shrine",
+        "description": "A Shinto shrine dedicated to Emperor Meiji and Empress Shoken.",
+        "location": "Tokyo",
+        "tags": ["culture", "temple"],
+        "cost": 0.00
+    },
+    {
+        "name": "Ueno Park",
+        "description": "A large public park in Tokyo with museums, a zoo, and cherry blossoms.",
+        "location": "Tokyo",
+        "tags": ["nature", "sightseeing"],
+        "cost": 0.00
+    },
+    {
+        "name": "Tsukiji Outer Market",
+        "description": "A vibrant market known for fresh seafood and produce.",
+        "location": "Tokyo",
+        "tags": ["food", "culture"],
+        "cost": 30.00
+    },
+    {
+        "name": "Odaiba",
+        "description": "A popular shopping and entertainment district on a man-made island.",
+        "location": "Tokyo",
+        "tags": ["shopping", "entertainment"],
+        "cost": 20.00
+    },
+    {
+        "name": "Tokyo Disneyland",
+        "description": "A world-famous theme park with rides and attractions.",
+        "location": "Tokyo",
+        "tags": ["entertainment", "family"],
+        "cost": 80.00
+    },
+    {
+        "name": "Asakusa Temple",
+        "description": "One of Tokyo's oldest temples, known for its historic significance.",
+        "location": "Tokyo",
+        "tags": ["culture", "temple"],
+        "cost": 0.00
+    },
+    {
+        "name": "Akihabara",
+        "description": "Famous district for electronics and otaku culture.",
+        "location": "Tokyo",
+        "tags": ["shopping", "culture"],
+        "cost": 0.00
+    },
+    {
+        "name": "Ginza",
+        "description": "A district known for luxury shopping and fine dining.",
+        "location": "Tokyo",
+        "tags": ["shopping", "food"],
+        "cost": 50.00
+    },
+    {
+        "name": "Eiffel Tower",
+        "location": "Paris",
+        "tags": ["landmark", "architecture", "sightseeing"],
+        "description": "A wrought-iron lattice tower on the Champ de Mars, a global cultural icon of France.",
+        "cost": 50.00
+    },
+    {
+        "name": "Louvre Museum",
+        "description": "The world's largest art museum and a historic monument in Paris.",
+        "location": "Paris",
+        "tags": ["art", "culture"],
+        "cost": 20.00
+    },
+    {
+        "name": "Notre-Dame Cathedral",
+        "description": "A famous medieval Catholic cathedral, a masterpiece of French Gothic architecture.",
+        "location": "Paris",
+        "tags": ["culture", "religion"],
+        "cost": 0.00
+    },
+    {
+        "name": "The Colosseum",
+        "description": "An ancient Roman gladiatorial arena and a symbol of Imperial Rome.",
+        "location": "Rome",
+        "tags": ["landmark", "historical", "sightseeing"],
+        "cost": 15.00
+    },
+    {
+        "name": "Vatican Museums",
+        "description": "Home to some of the most significant art collections in the world, including Michelangelo's Sistine Chapel.",
+        "location": "Vatican City",
+        "tags": ["art", "culture"],
+        "cost": 25.00
+    },
+    {
+        "name": "Trevi Fountain",
+        "description": "One of the most famous fountains in the world, known for its Baroque artistry.",
+        "location": "Rome",
+        "tags": ["landmark", "culture"],
+        "cost": 0.00
+    },
+    {
+        "name": "Great Wall of China",
+        "description": "Ancient world wonder stretching across northern China, offering hiking and historical exploration.",
+        "location": "Beijing",
+        "tags": ["historical", "sightseeing"],
+        "cost": 30.00
+    },
+    {
+        "name": "Forbidden City",
+        "description": "A sprawling palace complex that was the former Chinese imperial palace.",
+        "location": "Beijing",
+        "tags": ["historical", "culture"],
+        "cost": 20.00
+    },
+    {
+        "name": "Taj Mahal",
+        "description": "A UNESCO World Heritage site and one of the most iconic symbols of India.",
+        "location": "Agra",
+        "tags": ["landmark", "historical", "sightseeing"],
+        "cost": 15.00
+    },
+    {
+        "name": "Santorini",
+        "description": "A picturesque Greek island known for its white-washed buildings and breathtaking sunsets.",
+        "location": "Greece",
+        "tags": ["sightseeing", "romantic"],
+        "cost": 0.00
+    },
+    {
+        "name": "Statue of Liberty",
+        "description": "A colossal neoclassical sculpture on Liberty Island in New York Harbor, symbolizing freedom.",
+        "location": "New York",
+        "tags": ["landmark", "culture"],
+        "cost": 25.00
+    },
+    {
+        "name": "Central Park",
+        "description": "A massive public park in New York City, offering nature walks, picnics, and sightseeing.",
+        "location": "New York",
+        "tags": ["nature", "recreation"],
+        "cost": 0.00
+    },
+    {
+        "name": "Sydney Opera House",
+        "description": "A multi-venue performing arts center and one of Australia's most iconic landmarks.",
+        "location": "Sydney",
+        "tags": ["culture", "entertainment", "landmark"],
+        "cost": 40.00
+    },
+    {
+        "name": "Great Barrier Reef",
+        "description": "The world's largest coral reef system, offering diving and snorkeling experiences.",
+        "location": "Queensland",
+        "tags": ["nature", "adventure"],
+        "cost": 100.00
+    },
+    {
+        "name": "Machu Picchu",
+        "description": "An ancient Incan citadel set high in the Andes Mountains in Peru, renowned for its history and views.",
+        "location": "Peru",
+        "tags": ["historical", "adventure"],
+        "cost": 40.00
+    }
+]
+
