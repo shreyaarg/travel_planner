@@ -1,0 +1,19 @@
+# Overview
+A web application that creates custom travel itineraries based on user preferences, including destination, budget, interests, and trip duration.
+
+# Features
+Dynamic Itinerary Generation: Tailored suggestions based on inputs.
+Budget Tracking: Daily cost calculations to stay within budget.
+Auto-Suggestions: Helps users find destinations and interests easily.
+
+# Tech Stack
+Frontend: HTML, CSS, JavaScript
+Backend: Python, Flask
+Data: JSON 
+
+# Usage
+Input destination, budget, interests, and trip duration.
+Click "Generate Itinerary" to receive a customized plan.
+
+# Example
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/930583d9-0333-4d0d-8c1f-5221be54aa6b/a283e969-ac89-4cfb-8a5b-2bcb725bc8ab/image.png)
